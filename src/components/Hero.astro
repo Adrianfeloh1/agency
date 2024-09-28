@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/paisaje.jpg";
+import Navbar from "./Navbar.astro";
+---
+
+<section class="relative h-screen">
+  <Image
+    class="w-full h-full object-cover"
+    src={heroImage}
+    alt="Imagen de fondo"
+  />
+  <div class="absolute inset-0 flex flex-col items-left justify-center text-white mx-24">
+    <p class="font-raleway text-3xl font-bold text-[#EA4335]">
+      DIGITAL AGENCY
+    </p>
+    <h1 class="font-anton text-[14rem] tracking-[5rem]">
+      NEXEL
+    </h1>
+    <Navbar />
+  </div>
+</section>

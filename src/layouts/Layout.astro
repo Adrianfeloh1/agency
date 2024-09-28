@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { 
+  title, 
+  description = "NEXEL: Agencia digital líder en diseño web, desarrollo de apps y marketing digital. Impulsamos tu negocio con soluciones tecnológicas innovadoras." 
+} = Astro.props;
+
+const siteName = "NEXEL - Agencia Digital";
+const siteUrl = "https://nexel.com/"; // PENDIENTE CAMBIAR URL
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Metaetiquetas adicionales -->
+		<meta name="author" content={siteName} />
+		<meta name="keywords" content="nexel, agencia digital, diseño web, desarrollo de apps, marketing digital, SEO, soluciones tecnológicas, transformación digital" />
+		
+		<!-- Open Graph / Facebook / Instagram -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={`${siteUrl}og-image.jpg`} />
+		<meta property="og:image:alt" content={`NEXEL - Soluciones digitales innovadoras`} />
+		<meta property="og:site_name" content={siteName} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
