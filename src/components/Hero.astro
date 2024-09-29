@@ -1,22 +1,24 @@
 ---
-import { Image } from "astro:assets";
-import heroImage from "../assets/paisaje.jpg";
 import Navbar from "./Navbar.astro";
+import heroVideo from "../assets/video-ab.mp4";
 ---
 
 <section class="relative h-screen">
-  <Image
-    class="w-full h-full object-cover"
-    src={heroImage}
-    alt="Imagen de fondo"
-  />
-  <div class="absolute inset-0 flex flex-col items-left justify-center text-white mx-24">
-    <p class="font-raleway text-3xl font-bold text-[#EA4335]">
-      DIGITAL AGENCY
-    </p>
-    <h1 class="font-anton text-[14rem] tracking-[5rem]">
-      NEXEL
+  <video 
+    class="w-full h-full object-cover" 
+    src={heroVideo} 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+  ></video>
+  <div class="absolute inset-0 flex flex-col justify-center text-white bottom-32 ml-32" >
+    <h1 class="font-anton text-[10rem] tracking-[7rem]">
+      nexus
     </h1>
-    <Navbar />
+    <p class="font-raleway text-3xl font-bold tracking-[2.5rem] text-white">
+    - DISEÑO WEB -
+    </p>
   </div>
+  <Navbar  />
 </section>
