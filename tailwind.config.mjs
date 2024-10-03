@@ -6,9 +6,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				anton: ['Anton SC', 'sans-serif'], // Fuente principal
-				raleway: ['Raleway', 'serif'],      // Fuente secundaria
-			},			
+				anton: ['Anton SC', 'sans-serif'], 
+				raleway: ['Raleway', 'serif'],      
+			},		
 		},
 	},
 	plugins: [],
