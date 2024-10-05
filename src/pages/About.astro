@@ -1,9 +1,33 @@
 ---
+
 ---
-<section id="about-us" class="py-16 bg-gray-100">
-    <div class="container mx-auto">
-       <h2 transition:name="nosotros" class=" font-anton text-4xl font-bold mb-6">Nosotros</h2>
-       <p>Breve historia de la agencia...</p>
-    </div>
+
+<section id="about-us" class="relative py-8 px-12  bg-gray-100">
+   <!-- Contenedor flex para alinear el texto 'Nosotros' y la flecha 'Atrás' -->
+   <div class="flex items-center justify-between mx-8 mb-2">
+     <!-- Flecha con 'Atrás' en la parte superior izquierda -->
+     <div class="flex items-center">
+      <a href="/" class="flex items-center text-gray-700 hover:underline">
+         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m7-7l-7 7 7 7" />
+         </svg>
+         Atrás
+       </a>       
+     </div>
+ 
+     <!-- Texto 'Nosotros' centrado -->
+     <div class="text-center">
+       <p class="text-gray-700 font-raleway text-xl">- Nosotros -</p>
+     </div>
+ 
+     <!-- Elemento vacío para alinear correctamente en el flex container -->
+     <div class="w-16"></div>
+   </div>
+ 
+   <!-- Contenido principal de la sección -->
+   <div class="container mx-auto">
+     <h2 class="font-anton text-4xl font-bold mb-6">Nosotros</h2>
+     <p>Breve historia de la agencia...</p>
+   </div>
  </section>
  
