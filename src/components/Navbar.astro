@@ -1,25 +1,30 @@
+---
+const navItems = [
+  { href: "/", text: "inicio", number: "01" },
+  { href: "/About", text: "nosotros", number: "02" },
+  { href: "/Services", text: "servicios", number: "03" },
+  { href: "/Contact", text: "contacto", number: "04" },
+];
 
-<nav class=" absolute bottom-48 font-anton text-4xl w-full bg-black bg-opacity-70 backdrop-blur-[0.3rem] py-12">
-    <ul class="flex justify-between text-white mx-32">
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="absolute bottom-24 sm:bottom-48 font-anton text-lg xl:text-4xl sm:text-2xl w-full bg-black bg-opacity-70 backdrop-blur-[0.3rem] py-12">
+  <ul class="flex justify-center text-white gap-4 xl:gap-52 lg:gap-32 sm:gap-20">
+    {navItems.map((item) => (
       <li class="relative">
-         <a href="#hero" class="tracking-wider uppercase">Inicio</a>         
-         <span class="absolute top-[-2rem] left-0 text-xl tracking-widest text-[#6cadd2]">01</span>
-      </li>
-      <li class="relative">
-        <a href="#about-us" class="tracking-wider uppercase">Nosotros</a>
-        <span class="absolute top-[-2rem] left-0 text-xl tracking-wider text-[#6cadd2]">02</span>
-      </li>
-      <li class="relative">
-        <a href="#services" class="tracking-wider uppercase">Servicios</a>
-        <span class="absolute top-[-2rem] left-0 text-xl tracking-wider text-[#6cadd2]">03</span>
-      </li>
-      <li class="relative">
-        <a href="#contact" class="tracking-wider uppercase">
-          Contacto
+        <a
+          href={item.href}
+          class={`tracking-wider transition-colors duration-300 ${
+            currentPath === item.href ? "text-[#6cadd2]" : "hover:text-[#6cadd2]"
+          }`}
+        >
+          {item.text}
         </a>
-        <!-- Número 04 sobre Contacto -->
-        <span class="absolute top-[-2rem] left-0 text-xl tracking-wider text-[#6cadd2]">04</span>
+        <span class="absolute top-[-1.5rem] sm:top-[-2rem] left-0 text-sm sm:text-xl tracking-widest text-[#ffd153]">
+          {item.number}
+        </span>
       </li>
-    </ul>
- </nav>
- 
+    ))}
+  </ul>
+</nav>

@@ -24,12 +24,12 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── components/
 │   │   ├── Navbar.astro # Componente para la barra de navegación
 │   │   ├── Hero.astro   # Componente para la imagen de pantalla completa
-│   │   ├── AboutUs.astro # Sección 'Nosotros'
-│   │   ├── Services.astro # Sección 'Servicios'
-│   │   ├── Contact.astro  # Sección 'Contacto'
 │   ├── layouts/
 │   │   └── Layout.astro   # Diseño general
 │   └── pages/
+        ├── AboutUs.astro # Sección 'Nosotros'
+│       ├── Services.astro # Sección 'Servicios'
+│       ├── Contact.astro  # Sección 'Contacto'
 │       └── index.astro    # Página principal que importa los componentes
 └── package.json
 ```

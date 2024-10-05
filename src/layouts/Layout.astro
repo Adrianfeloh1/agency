@@ -1,4 +1,7 @@
 ---
+
+import Navbar from "../components/Navbar.astro";
+
 interface Props {
 	title: string;
 	description?: string;
@@ -9,8 +12,8 @@ const {
   description = "NEXEL: Agencia digital líder en diseño web, desarrollo de apps y marketing digital. Impulsamos tu negocio con soluciones tecnológicas innovadoras." 
 } = Astro.props;
 
-const siteName = "NEXEL - Agencia Digital";
-const siteUrl = "https://nexel.com/"; // PENDIENTE CAMBIAR URL
+const siteName = "PHYRO - Agencia Digital";
+const siteUrl = "https://phyro.com/"; // PENDIENTE CAMBIAR URL
 ---
 
 <!doctype html>
@@ -39,9 +42,13 @@ const siteUrl = "https://nexel.com/"; // PENDIENTE CAMBIAR URL
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		
-		<title>{title}</title>
+		<title>{title}</title>		
+		
 	</head>
 	<body>
-		<slot />
+		<main >
+			<slot />
+		</main>
+		<Navbar />
 	</body>
 </html>

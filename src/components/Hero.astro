@@ -1,6 +1,6 @@
 ---
-import Navbar from "./Navbar.astro";
 import heroVideo from "../assets/video-ab.mp4";
+
 ---
 
 <section class="relative h-screen">
@@ -12,16 +12,16 @@ import heroVideo from "../assets/video-ab.mp4";
     loop 
     playsinline
   ></video>
-  <div class="absolute inset-0 flex justify-center gap-36 items-center text-white bottom-32" >
-    <h1 class="font-anton text-[9rem] tracking-[5rem]">
+  <div class="flex flex-col-reverse justify-end mt-8 absolute inset-0 sm:flex sm:flex-row sm:justify-center xl:gap-36 sm:gap-18 items-center text-white bottom-32" >
+    <h1 class="mt-32 sm:mt-0 font-anton text-8xl tracking-widest xl:text-[10rem] sm:text-[7rem] lg:tracking-[4.7rem] sm:tracking-[1.7rem]">
       PHYRO
     </h1>
     <div class="border-4 p-3 rounded-md">
-      <p class="font-raleway text-3xl font-bold tracking-[0.2rem] text-[#6cadd2]" >
+      <p class="font-raleway xl:text-3xl sm:text-lg tracking-[0.2rem] text-[#6cadd2]" >
       - DISEÑO WEB -
       </p>
-      <p class="font-raleway text-center text-3xl font-bold tracking-[0.2rem] text-[#ffd153]" >CREATIVO</p>
+      <p class="font-raleway text-center text-lg xl:text-3xl sm:text-lg tracking-[0.2rem] text-[#ffd153]" >CREATIVO</p>
     </div>
   </div>
-  <Navbar  />
+  
 </section>
