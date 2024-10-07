@@ -1,7 +1,4 @@
 ---
-
-import Navbar from "../components/Navbar.astro";
-
 interface Props {
 	title: string;
 	description?: string;
@@ -39,16 +36,34 @@ const siteUrl = "https://phyro.com/"; // PENDIENTE CAMBIAR URL
 		<meta property="og:site_name" content={siteName} />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    	<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		
 		<title>{title}</title>		
-		
+		<style is:global>
+			/* Aplicar las fuentes globalmente */
+			:root {
+			  --font-anton: 'Anton', sans-serif;
+			  --font-raleway: 'Raleway', serif;
+			}
+	  
+			body {
+			  @apply font-raleway;
+			  font-weight: 600;
+			  background-color: rgb(245, 245, 245)
+			}
+	  
+			h1, h2, h3, h4, h5, h6 {
+			  @apply font-anton;
+			  color: #1A1A1A;
+			  letter-spacing: 0.2rem;
+			}
+		  </style>
 	</head>
 	<body>
 		<main >
 			<slot />
 		</main>
-		<Navbar />
 	</body>
+	
 </html>

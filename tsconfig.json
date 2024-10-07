@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "ignoreDeprecations": "5.0"
-  }
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": true,
+        "verbatimModuleSyntax": true,
+        "ignoreDeprecations": "5.0"
+    }
 }

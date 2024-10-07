@@ -1,33 +1,36 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import SuperiorNav from "../components/SuperiorNav.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import people from '../assets/people.png';
 
+
+const pageTitle = "Nosotros";
 ---
 
-<section id="about-us" class="relative py-8 px-12  bg-gray-100">
-   <!-- Contenedor flex para alinear el texto 'Nosotros' y la flecha 'Atrás' -->
-   <div class="flex items-center justify-between mx-8 mb-2">
-     <!-- Flecha con 'Atrás' en la parte superior izquierda -->
-     <div class="flex items-center">
-      <a href="/" class="flex items-center text-gray-700 hover:underline">
-         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m7-7l-7 7 7 7" />
-         </svg>
-         Atrás
-       </a>       
-     </div>
- 
-     <!-- Texto 'Nosotros' centrado -->
-     <div class="text-center">
-       <p class="text-gray-700 font-raleway text-xl">- Nosotros -</p>
-     </div>
- 
-     <!-- Elemento vacío para alinear correctamente en el flex container -->
-     <div class="w-16"></div>
-   </div>
- 
-   <!-- Contenido principal de la sección -->
-   <div class="container mx-auto">
-     <h2 class="font-anton text-4xl font-bold mb-6">Nosotros</h2>
-     <p>Breve historia de la agencia...</p>
-   </div>
- </section>
- 
+<Layout title={pageTitle}>
+    <section class="container mx-auto text-lg leading-6">
+        <SuperiorNav />
+        <article class="h-[650px] flex flex-row-reverse justify-between mt-20 gap-10 ">
+            <div class=" w-1/2">
+                <h2 class="font-anton text-7xl font-bold mb-2">Nuestra Historia 
+                </h2>
+                <p class="mb-10 tracking-wider font-raleway text-[#6cadd2] text-2xl ">- Quienes somos?</p>
+
+                <p class="mb-6">Después de varios años, tres amigos de adolescencia se reunieron en la ciudad de medellín. Ezzard, un talentoso diseñador, trabajaba en una agencia de publicidad; Adrian, un desarrollador front-end apasionado, creaba sitios web por su cuenta; y Víctor, un experto en back-end, había estado innovando en el mundo tecnológico trabajando para grandes compañías.</p>
+
+                <p class="mb-6">Durante su encuentro, compartieron historias sobre sus caminos y las frustraciones que habían enfrentado.</p> 
+                  
+                <p >La idea de formar una agencia digital resonó en ellos. Juntos, podrían combinar diseño, desarrollo y tecnología, reviviendo su amistad y creando algo significativo. Así nació AVE - Agencia Digital, con la misión de ayudar a las marcas a contar sus historias a través de soluciones innovadoras, donde la creatividad y la colaboración siempre irían de la mano.</p>
+            </div>
+            <div class=" w-1/2">
+              <Image
+                  src={people}
+                  alt="Personas hablando"                  
+              />              
+          </div>
+        </article>
+    </section>
+    <Navbar fixed={false} />
+</Layout>
