@@ -13,15 +13,16 @@ const currentPath = Astro.url.pathname;
 const { fixed = true } = Astro.props; // Valor por defecto es true
 ---
 
-<nav class={`font-anton text-lg xl:text-4xl sm:text-2xl w-full bg-black bg-opacity-70 backdrop-blur-[0.3rem] py-8 sm:py-12 ${fixed ? 'absolute bottom-24 sm:bottom-40' : ''}`}>
+<nav class={`font-anton text-lg xl:text-4xl sm:text-2xl w-full bg-black bg-opacity-70 backdrop-blur-[0.3rem] py-8 sm:py-12 
+  ${fixed ? 'absolute bottom-24 sm:bottom-40' : 'fixed bottom-0 left-0 right-0 bg-opacity-100'}`}>
   <ul class="flex justify-center text-white gap-4 xl:gap-52 lg:gap-32 sm:gap-20">
     {navItems.map((item) => (
       <li class="relative">
         <a
           href={item.href}
           class={`tracking-wider transition-colors duration-300 ${
-            currentPath === item.href ? "text-[#4392dc]" : "hover:text-[#4392dc]"
-          }`}
+            currentPath === item.href ? "text-[#4392dc]" : "hover:text-[#4392dc]"}`
+          }
         >
           {item.text}
         </a>
