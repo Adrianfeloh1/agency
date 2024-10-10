@@ -1,4 +1,8 @@
 ---
+import Design from "../icons/Design.astro";
+import Global from "../icons/Global.astro";
+import Brand from "../icons/Brand.astro";
+
 import Navbar from "../components/Navbar.astro";
 import SuperiorNav from "../components/SuperiorNav.astro";
 import Layout from "../layouts/Layout.astro";
@@ -10,20 +14,20 @@ const pageTitle = "Nosotros";
 ---
 
 <Layout title={pageTitle}>
-    <section class="container mx-auto text-sm sm:text-lg ">
+    <section class=" container mx-auto text-sm sm:text-lg ">
         <SuperiorNav />
-        <article class="h-full flex flex-col-reverse px-4 sm:px-8 lg:px-0 lg:flex lg:flex-row lg:justify-between mt-2 lg:mt-20 sm:gap-10 ">
-            <div class="flex flex-col items-center mt-6 mb-32 lg:mt-0">
+        <article class=" h-full flex flex-col-reverse px-4 sm:px-8 lg:px-0 lg:flex lg:flex-row lg:justify-between mt-2 lg:mt-20 sm:gap-10 ">
+            <div class="flex flex-col items-center mt-6 mb-20 lg:mt-0">
                 <Image
                     src={people}
                     alt="Personas hablando"                                    
                 />              
             </div>
             <div class=" lg:w-2/3 xl:w-1/2 sm:leading-6 ">
-                <h2 class="font-anton text-4xl sm:text-5xl xl:text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#1a1010] via-[#1A1A1A] to-[#ffd153]">
-                    Nuestra Historia
+                <h2 class="text-4xl sm:text-5xl xl:text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#1a1010] via-[#1A1A1A] to-[#ffd153]">
+                    nuestra historia
                 </h2>                  
-                  
+                
                 <p class="mb-10 tracking-wide font-raleway text-[#0074D9] text-lg xl:text-xl ">- Quienes somos?</p>
 
                 <p class="mb-6 ">Después de varios años, tres buenos amigos de adolescencia se reunieron en la ciudad de medellín. Ezzard, un talentoso diseñador, trabajaba en una agencia de publicidad y una start up emergente; Adrian, un desarrollador front-end apasionado, creaba sitios web por su cuenta en las ultimas tecnologías; y Víctor, un experto en back-end, había estado innovando en el mundo tecnológico trabajando para grandes compañías.</p>
@@ -34,6 +38,32 @@ const pageTitle = "Nosotros";
             </div>
             
         </article>
+
     </section>
+    <article class="h-[600px] lg:mt-20 bg-[#151c22] mb-60 ">
+        <h2 class="text-4xl pt-20 text-center sm:text-5xl xl:text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-[#0074D9]">lo que hacemos</h2>
+    
+        <div class="flex justify-center gap-8 px-4 mt-20">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-xs">
+                <Global class="w-16 h-16 mx-auto text-[#0074D9]" />
+                <h3 class="text-2xl font-bold mt-6 tracking-widest">Desarrollo Web</h3>
+                <p class="mt-6 text-gray-700 text-sm sm:text-lg sm:leading-6">Creamos sitios web dinámicos, funcionales y optimizados para ofrecer la mejor experiencia de usuario en línea.</p>
+            </div>
+    
+            
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-xs">
+                <Brand class="w-16 h-16 mx-auto text-[#0074D9]" />
+                <h3 class="text-2xl font-bold mt-6 tracking-widest">Branding Estratégico</h3>
+                <p class="mt-6 text-gray-700 text-sm sm:text-lg sm:leading-6">Desarrollamos estrategias de branding efectivas para construir y mantener una identidad de marca fuerte.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-xs">
+                <Design class="w-16 h-16 mx-auto text-[#0074D9]" />
+                <h3 class="text-2xl font-bold mt-6 tracking-widest">Diseño Creativo</h3>
+                <p class="mt-6 text-gray-700 text-sm sm:text-lg sm:leading-6 ">Creamos diseños innovadores que capturan la esencia de tu marca y cautivan a tus clientes.</p>
+            </div>    
+        </div>
+    </article>
+    
+    
     <Navbar fixed={false} />
 </Layout>

@@ -14,7 +14,7 @@ const { fixed = true } = Astro.props; // Valor por defecto es true
 ---
 
 <nav class={`font-anton text-lg xl:text-4xl sm:text-2xl w-full bg-black bg-opacity-70 backdrop-blur-[0.3rem] py-8 sm:py-12 
-  ${fixed ? 'absolute bottom-32 sm:bottom-72 lg:bottom-96' : 'fixed bottom-0 left-0 right-0 bg-black'}`}>
+  ${fixed ? 'absolute bottom-32 sm:bottom-60' : 'fixed bottom-0 left-0 right-0 bg-black'}`}>
   <ul class="flex justify-center text-white gap-4 xl:gap-52 lg:gap-32 sm:gap-20">
     {navItems.map((item) => (
       <li class="relative">
