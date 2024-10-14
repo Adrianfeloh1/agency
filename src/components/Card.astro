@@ -1,27 +1,61 @@
 ---
 import { Image } from 'astro:assets';
-import adrian from '../assets/adrian.png';
+import LinkedIn from "../icons/LinkedIn.astro";
+import Instagram from "../icons/Instagram.astro";
+
+interface Props {
+  src: ImageMetadata;
+  imgAlt: string;
+  title: string;
+  description1: string;
+  description2: string;
+  description3: string;
+}
+
 const { 
-  imgSrc = "/api/placeholder/400/300", 
-  imgAlt = "Hermoso paisaje de montaña",
-  title = "Aventura en las Montañas",
-  description = "Descubre la majestuosidad de los Alpes Suizos en nuestro tour de 7 días. Experimenta vistas impresionantes, aire fresco de montaña y la emoción de alcanzar nuevas alturas."
+  src,
+  imgAlt = "Imagen descriptiva",
+  title = "Título de la tarjeta",
+  description1 = "Descripción 1",
+  description2 = "Descripción 2",
+  description3 = "Descripción 3"
 } = Astro.props;
 ---
 
-<div class="flex bg-white rounded-lg overflow-hidden max-w-2xl">
-  <div class="w-1/3">
-    <Image
-        src={adrian}
-        alt="Personas hablando"                                    
-    />  
-  </div>
-  <div class="w-2/3 p-6">
-    <h2 class="text-xl font-semibold text-gray-800 mb-2">{title}</h2>
-    <p class="text-gray-600">{description}</p>
-    <div class="mt-4">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#aventura</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#montañas</span>
+<div class="relative w-full overflow-hidden">
+  <div class="skewed-bg bg-[#638db1]"></div>
+  <div class="max-w-6xl mx-auto flex items-center relative z-10 py-12">
+    <div class="w-1/2 flex justify-end">
+      <div class="relative">
+        <div class="absolute inset-0 bg-[#ffd153cb] opacity-100 transform -translate-x-6 translate-y-6"></div>
+        <Image
+          src={src}
+          alt={imgAlt}
+          class="w-72 h-auto object-cover relative z-10"
+        />
+      </div>
+    </div>
+    <div class="w-1/2 text-left ml-16">
+      <h2 class="text-4xl tracking-wider text-gray-900 mb-4">{title}</h2>
+      <p class="text-lg text-gray-900">{description1}</p>
+      <p class="text-lg text-gray-900">{description2}</p>
+      <p class="text-lg text-gray-900">{description3}</p>
+      <div class="mt-4">
+        <a href="https://www.instagram.com" target="_blank" class="inline-block px-2 py-2"><Instagram /></a>
+        <a href="https://www.linkedin.com" target="_blank" class="inline-block px-2 py-2"><LinkedIn /></a>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  .skewed-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 800px;
+    transform: skew(0deg, 2deg);
+    transform-origin: top left;
+  }
+</style>

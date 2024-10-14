@@ -6,9 +6,12 @@ import Brand from "../icons/Brand.astro";
 import Navbar from "../components/Navbar.astro";
 import SuperiorNav from "../components/SuperiorNav.astro";
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
 import { Image } from 'astro:assets';
 import people from '../assets/people.png';
-import Card from "../components/Card.astro";
+import adrian from '../assets/adrian.png';
+
 
 
 const pageTitle = "Nosotros";
@@ -41,7 +44,7 @@ const pageTitle = "Nosotros";
         </article>
 
     </section>
-    <section class="lg:h-[620px] bg-[#151c22] pb-32 lg:pb-20 lg:mt-20 lg:mb-36 ">
+    <section class="lg:h-[620px] bg-[#151c22] pb-32 lg:pb-20 lg:mt-20 lg:mb-24 ">
         <h2 class="text-4xl pt-20 text-center sm:text-5xl xl:text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-[#0074D9]">lo que hacemos</h2>
     
         <article class="flex flex-col items-center gap-8 lg:flex-row lg:flex justify-center lg:ite lg:gap-8 mt-20">
@@ -68,12 +71,17 @@ const pageTitle = "Nosotros";
         </article>
     </section>
 
-    <section class="h-screen">
-        <h2>EL EQUIPO</h2>
-        <Card />
-    </section>
-
-    
+    <section class="h-screen text-center">
+        <h2 class="text-4xl text-center sm:text-5xl xl:text-7xl font-bold mb-24 text-transparent bg-clip-text bg-gradient-to-r from-[#1a1010] via-[#1a1010] to-[#ffd153]">EL EQUIPO</h2>
+        <Card
+            src={adrian}
+            imgAlt="Adrian Front-End"
+            title="adrian f. ochoa h."
+            description1=" Diseñador UX-UI" 
+            description2=" Desarrollador Front-End" 
+            description3=" Desarrollador Full Stack" 
+        />
+    </section>    
     
     <Navbar fixed={false} />
 </Layout>
