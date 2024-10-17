@@ -10,6 +10,7 @@ interface Props {
   description1?: string;
   description2?: string;
   description3?: string;
+  shadowColor?: string;
 }
 
 const {
@@ -18,14 +19,15 @@ const {
   title = "Título de la tarjeta",
   description1 = "Descripción 1",
   description2 = "Descripción 2",
-  description3 = "Descripción 3"
+  description3 = "Descripción 3",
+  shadowColor = "#ffd153cb"
 } = Astro.props;
 ---
-  
-<div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center relative">
-  <div class="w-1/2 flex justify-end">
-    <div class="relative">
-      <div class="absolute inset-0 bg-[#ffd153cb] opacity-100 transform -translate-x-6 translate-y-6"></div>
+
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center relative">
+  <div class="sm:w-2/2 flex justify-end">
+    <div class="relative">      
+      <div class="absolute inset-0 opacity-100 transform -translate-x-4 translate-y-4 sm:-translate-x-6 sm:translate-y-6" style={`background-color: ${shadowColor};`}></div>
       <Image
         src={src}
         alt={imgAlt}
@@ -34,9 +36,9 @@ const {
     </div>
   </div>
   
-  <div class="w-1/2 text-left ml-16 py-12 sm:py-0">
+  <div class="sm:w-1/2 text-left sm:ml-16 py-12 sm:py-0">
     <h2 class="text-2xl sm:text-4xl tracking-wider text-gray-900 mb-4">{title}</h2>
-    <div class="text-lg text-gray-900 space-y-2 leading-6">
+    <div class="text-sm sm:text-lg text-gray-900 space-y-2 leading-4 sm:leading-6">
       <p>{description1}</p>
       <p>{description2}</p>
       <p>{description3}</p>
